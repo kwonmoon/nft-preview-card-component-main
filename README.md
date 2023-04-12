@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/kwonmoon/)
-- Live Site URL: [Netlify]()
+- Solution URL: [Github](https://github.com/kwonmoon/nft-preview-card-component-main)
+- Live Site URL: [Netlify](https://joyful-truffle-664fe7.netlify.app/)
 
 ## My process
 
