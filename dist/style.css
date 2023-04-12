@@ -1,0 +1,250 @@
+:root {
+  --ff-sans: "Outfit", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: hsl(var(--color-vary-dark-blue-main));
+  color: hsl(var(--color-dark-grayish-blue));
+  font-family: var(--ff-sans);
+  font-size: 1.125rem;
+  line-height: 1.4444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --color-soft-blue: 215, 51%, 70%;
+  --color-cyan: 178, 100%, 50%;
+  --color-white: 0, 0%, 100%;
+  --color-vary-dark-blue-main: 217, 54%, 11%;
+  --color-vary-dark-blue-card: 216, 50%, 16%;
+  --color-vary-dark-blue-line: 215, 32%, 27%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2192;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+h3 {
+  line-height: 1.1;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+:root {
+  --transition: 250ms ease-in-out;
+}
+
+.card {
+  max-width: 21.875rem;
+  max-height: 37.25rem;
+  background-color: hsl(var(--color-vary-dark-blue-card));
+  border-radius: 0.9375rem;
+  box-shadow: 0px 1.5625rem 3.125rem hsla(0, 0%, 0%, 0.1);
+}
+@media (max-width: 43.75em) {
+  .card {
+    max-width: 20.4375rem;
+    max-height: 33.9375rem;
+  }
+}
+.card__nft {
+  position: relative;
+}
+.card__nft:hover {
+  cursor: pointer;
+}
+.card__nft:hover .card__nft__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.card__nft__original {
+  max-width: 18.875rem;
+  aspect-ratio: 1;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 43.75em) {
+  .card__nft__original {
+    max-width: 17.375rem;
+  }
+}
+.card__nft__overlay {
+  width: 18.875rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(var(--color-cyan), 0.5);
+  border-radius: 0.5rem;
+  margin: 0 1.5rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+@media (max-width: 43.75em) {
+  .card__nft__overlay {
+    max-width: 17.375rem;
+  }
+}
+.card__name {
+  margin: 0 1.5rem 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.26;
+  color: hsl(var(--color-white));
+  transition: var(--transition);
+}
+@media (max-width: 43.75em) {
+  .card__name {
+    margin-bottom: 0.75rem;
+  }
+}
+.card__name:hover {
+  cursor: pointer;
+  color: hsl(var(--color-cyan));
+}
+.card__description {
+  margin: 0 1.5rem 1.5rem;
+  font-weight: 300;
+  color: hsl(var(--color-soft-blue));
+}
+@media (max-width: 43.75em) {
+  .card__description {
+    margin-bottom: 0.75rem;
+  }
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 1.26;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid hsl(var(--color-vary-dark-blue-line));
+  margin: 0 1.5rem 1rem;
+}
+@media (max-width: 43.75em) {
+  .card__info {
+    padding-bottom: 1rem;
+  }
+}
+.card__info__left {
+  display: flex;
+  gap: 0.405rem;
+  align-items: center;
+}
+.card__info__left > span {
+  font-weight: 600;
+  color: hsl(var(--color-cyan));
+}
+@media (max-width: 43.75em) {
+  .card__info__left > span {
+    font-size: 0.9375rem;
+  }
+}
+.card__info__right {
+  display: flex;
+  gap: 0.48125rem;
+  align-items: center;
+}
+.card__info__right > span {
+  font-weight: 400;
+  color: hsl(var(--color-soft-blue));
+}
+@media (max-width: 43.75em) {
+  .card__info__right > span {
+    font-size: 0.9375rem;
+  }
+}
+.card__footer {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.26;
+  margin: 0 1.5rem 1.5rem;
+}
+@media (max-width: 43.75em) {
+  .card__footer {
+    font-size: 0.9375rem;
+  }
+}
+.card__footer__avatar {
+  max-width: 2.0625rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.0625rem solid hsl(var(--color-white));
+  margin-right: 1rem;
+}
+.card__footer__phrase {
+  color: hsl(var(--color-soft-blue));
+  margin-right: 0.3125rem;
+}
+.card__footer__name {
+  color: hsl(var(--color-white));
+  transition: var(--transition);
+}
+.card__footer__name:hover {
+  cursor: pointer;
+  color: hsl(var(--color-cyan));
+}/*# sourceMappingURL=style.css.map */
